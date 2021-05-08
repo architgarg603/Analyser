@@ -34,6 +34,13 @@ let otherSize = 0;
 let imgCnt = 0;
 let imgSize = 0;
 let pathName = ''
+let chartDoc = 0;
+let chartAudio = 0;
+let chartVideo = 0;
+let chartImg = 0;
+let chartOther = 0;
+
+
 
 function setHeight(){
     let lowerDiv = document.querySelector(".lower");

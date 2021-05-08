@@ -142,6 +142,13 @@ function addList(category, src, ul) {
 
 function printDetails() {
 
+
+    chartDoc = docSize;
+    chartAudio = audioSize;
+    chartVideo = videoSize;
+    chartImg = imgSize;
+    chartOther = otherSize;
+
     docSize = getSizeAndUnit(docSize);
     imgSize = getSizeAndUnit(imgSize);
     audioSize = getSizeAndUnit(audioSize);

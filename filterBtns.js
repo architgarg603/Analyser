@@ -6,7 +6,7 @@ function setEvent() {
 
             let allLi = document.querySelectorAll("li");
 
-            for (let i = 1; i < allLi.length && i<8; i++) {
+            for (let i = 1; i < allLi.length ; i++) {
 
                 allLi[i].classList.add("dikha");
 
@@ -35,7 +35,7 @@ function setEvent() {
 
             for (let i = 1; i < allLi.length; i++) {
 
-                if (allLi[i].querySelector("span").classList.contains("documents")) {
+                if (allLi[i].querySelector("span").classList.contains("document")) {
                    allLi[i].classList.add("dikha");
                    cnt++;
                 } else {
@@ -65,7 +65,7 @@ function setEvent() {
 
             let allLi = document.querySelectorAll("li");
 
-            for (let i = 1; i < allLi.length && i<8; i++) {
+            for (let i = 1; i < allLi.length; i++) {
 
                 allLi[i].classList.add("dikha");
 
@@ -127,7 +127,7 @@ function setEvent() {
             let allLi = document.querySelectorAll("li");
 
           
-            for (let i = 1; i < allLi.length && i<8; i++) {
+            for (let i = 1; i < allLi.length; i++) {
 
                 allLi[i].classList.add("dikha");
 
@@ -187,7 +187,7 @@ function setEvent() {
 
             let allLi = document.querySelectorAll("li");
 
-            for (let i = 1; i < allLi.length && i<8; i++) {
+            for (let i = 1; i < allLi.length; i++) {
 
                 allLi[i].classList.add("dikha");
 
@@ -247,7 +247,7 @@ function setEvent() {
             let allLi = document.querySelectorAll("li");
 
            
-            for (let i = 1; i < allLi.length && i<8; i++) {
+            for (let i = 1; i < allLi.length; i++) {
 
                 allLi[i].classList.add("dikha");
 

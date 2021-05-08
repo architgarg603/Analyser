@@ -10,7 +10,7 @@ function setChart() {
         data: {
             datasets: [{
                 label: 'Memory Percentage',
-                data: [docSize.size, imgSize.size, audioSize.size, videoSize.size, otherSize.size],
+                data: [chartDoc, chartImg, chartAudio, chartVideo, chartOther],
                 backgroundColor: ['#008BFA', 'darkorange', 'rgb(253, 47, 47)', 'cyan', 'lawngreen'],
                 borderColor: 'transparent'
             }]
@@ -25,7 +25,7 @@ function setChart() {
     });
 
     let totalSize = document.querySelector(".totalSize");
-    let tempSize = parseInt(docSize.size) + parseInt(imgSize.size)+ parseInt(audioSize.size)+ parseInt(videoSize.size)+ parseInt(otherSize.size);
+    let tempSize = chartDoc+ chartImg+ chartAudio+ chartVideo+ chartOther;
     let tSize = getSizeAndUnit(tempSize);
 
     totalSize.innerHTML = `<span>Total </span><span>${tSize.size} ${tSize.sizeUnit}</span>`
