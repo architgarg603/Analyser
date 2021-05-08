@@ -1,0 +1,456 @@
+*{
+    box-sizing: border-box;
+    font-family: 'Itim', cursive;
+}
+
+body{
+    padding: 0;
+    margin: 0;
+    background-color: #1E1F2C; 
+}
+
+.header{
+    height: 60px;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0px 35px;
+    padding-top: 10px;
+    font-size: x-large;
+}
+
+.heading{
+    color: white;
+}
+
+.btns{
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    width: 35%;
+    color: white;
+    height: 100%;
+}
+
+.changeLocation,.organize{
+    width: 45%;
+    height: 80%;
+    background-color: #32364a;
+    border: 1px solid #52597d;
+    border-radius: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-left: 30px;
+    cursor: pointer;
+}
+.refresh{
+    cursor: pointer;
+}
+.organize{
+    width: 30%;
+}
+
+.container{
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    padding: 25px;
+    height: calc( 100vh - 60px);
+    overflow: auto;
+    position: relative;
+}
+
+.left{
+    width: 75%;
+    padding:0px 20px;
+}
+.upper{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    flex-wrap: wrap;
+    margin-bottom: 14px;
+}
+.p1,.p2,.p3,.p4{
+    width: 23%;
+    background-color: #32364a;
+    height: 170px;
+    border-radius: 15px;
+    padding: 20px;
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column;
+
+}
+.driveCard{
+    min-width: 190px;
+    margin-top: 15px;
+}
+
+.logo{
+    color: #008BFA;
+    background-color: #0089fa2d;
+    width: 40px;
+    height: 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: large;
+    border-radius: 10px;
+}
+
+.name{
+    color: white;
+}
+.bar{
+    background: #353b48;
+    display: block;
+    height: 6px;
+    border: 1px solid rgba(0,0,0,0.3);
+    border-radius: 3px;
+    overflow: hidden;
+    box-shadow: 0px 0px 10px #2187e7b3;
+    transition: 1s;
+}
+
+.percentage{
+    height: 4px;
+    float: left;
+    background: #2187e7;
+    width: 50%;
+    border-radius: 3px;
+}
+
+.info{
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    color: white;
+}
+.right{
+    width: 25%;
+    height: 100%;
+    min-height: calc( 100vh - 110px);
+}
+
+.wrap{
+    width: 100%;
+    height: calc( 100vh - 110px);
+    background-color: #32364a;
+    border-radius: 20px;
+    position: sticky;
+    top: 0px;
+    padding: 20px;
+}
+
+.lower{
+    width: 100%;
+    border-radius: 15px;
+    padding: 20px;
+    padding-bottom: 8px;
+    background-color: #32364a;
+    min-height: calc(100% - 200px);;
+    margin-bottom: 20px;
+}
+
+
+.lowerHead{
+    color: white;
+    font-size: large;
+}
+ul{
+    padding: 0px;
+    margin: 0px;
+}
+
+li{
+    list-style: none;
+    display: flex;
+    width: 100%;
+    align-items: center;
+    color: white;
+    border-bottom: 2px solid rgba(128, 128, 128, 0.255);
+}
+
+.fName{
+    height: 50px;
+    width: 50%;
+    display: flex;
+    align-items: center;
+    word-break: break-all;
+}
+
+.fDate{
+    height: 50px;
+    width: 30%;
+    display: flex;
+    align-items: center;
+}
+
+.fSize{
+    height: 50px;
+    width: 20%;
+    display: flex;
+    align-items: center;
+}
+
+.loadMore,.loadLess{
+    width: 100%;
+    height: 30px;
+    display: flex;
+    color: white;
+    justify-content: center;
+    align-items: flex-end;
+    cursor: pointer;
+}
+.loadLess{
+    display: none;
+    /* height: 20px; */
+}
+.audio,.video,.audio,.document,.img,.other{
+    height: 35px;
+    width: 35px;
+    color: white;
+    margin-right: 10px;
+}
+
+.video::before{
+    font-family: "Font Awesome 5 Free";
+    content: "\f008";
+    font-weight: 600;
+    font-size: large;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    border-radius: 7px;
+    background-color: cyan;
+}
+
+.audio::before{
+    font-family: "Font Awesome 5 Free";
+    content: "\f025";
+    font-weight: 900;
+    font-size: large;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    border-radius: 7px;
+    background-color: rgb(253, 47, 47);
+}
+
+.document::before{
+    font-family: "Font Awesome 5 Free";
+    content: "\f15b";
+    font-weight: 600;
+    font-size: large;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    border-radius: 7px;
+    background-color: #008BFA;    
+}
+
+.img::before{
+    font-family: "Font Awesome 5 Free";
+    content: "\f03e";
+    font-weight: 600;
+    font-size: large;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    border-radius: 7px;
+    background-color:darkorange;
+}
+
+.other::before{
+    font-family: "Font Awesome 5 Free";
+    content: "\f5ab";
+    font-weight: 600;
+    font-size: large;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    border-radius: 7px;
+    background-color: rgb(44, 221, 80);
+}
+
+.statHead{
+    height: 40px;
+    color: white;
+    font-size: x-large;
+}
+
+.chart{
+    width: 100%;
+    height: 35%;
+    margin-bottom: 25px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+}
+.totalSize{
+    font-size: large;
+    position: absolute;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+#myChart{
+    height: 200px !important;   
+    width: 200px !important;   
+}
+
+.docStats,.imgStats,.audioStats,.otherStats,.videoStats{
+    width: 100%;
+    height: 60px;
+    border-radius: 10px;
+    margin-bottom: 10px;
+    border: 2px solid #52597d;
+    display: flex;
+    justify-content: space-between;
+    padding: 20px;
+    align-items: center;
+    color: white;
+    font-size: large;
+    padding-left: 80px;
+    position: relative;
+    cursor: pointer;
+}
+.fileCnt{
+    font-size: 15px;
+}
+
+.statsWrapper{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+.statsDocLogo::before{
+    font-family: "Font Awesome 5 Free";
+    content: "\f15b";
+    font-weight: 600;
+    font-size: xx-large;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 40px;
+    width: 40px;
+    color:#008BFA ;
+    position: absolute;  
+    left: 20px;
+}
+.statsImglogo::before{
+    font-family: "Font Awesome 5 Free";
+    content: "\f03e";
+    font-weight: 600;
+    font-size: xx-large;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 40px;
+    width: 40px;
+    color: darkorange;
+    position: absolute;  
+    left: 20px;
+}
+.statsVideologo::before{
+    font-family: "Font Awesome 5 Free";
+    content: "\f04b";
+    font-weight: 600;
+    font-size: xx-large;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 40px;
+    width: 40px;
+    color: cyan;
+    position: absolute;  
+    left: 20px;
+}
+.statsOtherLogo::before{
+    font-family: "Font Awesome 5 Free";
+    content: "\f0c5";
+    font-weight: 600;
+    font-size: xx-large;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 40px;
+    width: 40px;
+    color: lawngreen;
+    position: absolute;  
+    left: 20px;
+}
+.statsAudiologo::before{
+    font-family: "Font Awesome 5 Free";
+    content: "\f025";
+    font-weight: 600;
+    font-size: xx-large;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 40px;
+    width: 40px;
+    color:rgb(253, 47, 47);
+    position: absolute;  
+    left: 20px;
+}
+
+.hide1{
+    background-color: #1E1F2C;
+    width: 90%;
+    height: 25px;
+    position: fixed;
+    top: 60px;
+    z-index: 2;
+
+}
+.hide2{
+    background-color: #1E1F2C;
+    width: 90%;
+    height: 23px;
+    position: fixed;
+    bottom: 0px;
+    z-index: 2;
+
+}
+
+.hide{
+    position: absolute;
+    z-index: 10;
+    width: 100vw;
+    height: 100vh;
+    backdrop-filter: blur(10px);
+
+}
+
+.container::-webkit-scrollbar {
+    width: 13px;
+}
+ 
+.container::-webkit-scrollbar-track {
+    -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.3); 
+    border-radius: 10px;
+    
+    
+}
+ 
+.container::-webkit-scrollbar-thumb {
+    border-radius: 10px;
+    -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.5); 
+}
+
+
+
