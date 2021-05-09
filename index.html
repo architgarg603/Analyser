@@ -6,19 +6,31 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Analyser</title>
+
+    <!--==================================== Font awesome CDN=========================================== -->
+
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"
         integrity="sha512-iBBXm8fW90+nuLcSKlbmrPcLa0OT92xO1BIsZ+ywDWZCvqsWgccV3gFoRBv0z+8dLJgyAHIhR35VZc2oM/gI1w=="
         crossorigin="anonymous" />
+
+    <!--==================================== google fonts =========================================== -->
+
     <link rel="preconnect" href="https://fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css2?family=Itim&family=Noto+Sans+JP&display=swap" rel="stylesheet">
-    <link rel="icon" href="./fevicon.png" type="image/png" sizes="16x16">
+
+    <!--==================================== Css Files =========================================== -->
 
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="./media.css">
 </head>
 
 <body>
+    <!--================================================= Blur div during add path dialog ================================= -->
+
     <div class="hide"></div>
+
+    <!--================================================= Header ================================= -->
+
     <div class="header">
         <div class="heading">Analyser</div>
         <div class="btns">
@@ -27,21 +39,35 @@
             <div class="changeLocation">Change Location</div>
         </div>
     </div>
+
+    <!--================================================= Main container ================================= -->
+
     <div class="container">
         <div class="hide1"></div>
         <div class="hide2"></div>
+
+        <!-- Left panel (drive + folders) -->
+
         <div class="left">
+
+            <!-- Drive container -->
+
             <div class="upper">
-               
+
             </div>
+
+            <!-- File List container  -->
+
             <div class="lower">
             </div>
         </div>
+
+        <!-- Stats Container -->
         <div class="right">
             <div class="wrap">
                 <div class="statHead">Storage Details</div>
                 <div class="chart">
-                    <canvas id="myChart" ></canvas>
+                    <canvas id="myChart"></canvas>
                     <div class="totalSize"></div>
                 </div>
                 <div class="docStats">
@@ -82,15 +108,16 @@
             </div>
         </div>
     </div>
+    <!-- chart.js CDN -->
     <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
-    <script src="./script.js"></script>
-    <script src="./getDrive.js"></script>
-    <script src="./utils.js"></script>
-    <script src="./organize.js"></script>
-    <script src="./filterBtns.js"></script>
-    <script src="./showList.js"></script>
-    <script src="./chart.js"></script>
-    <script src="./topbtns.js"></script>
+    <script src="./script.js"></script>     <!-- Variable Declaration + Set Right Div Height Fn -->
+    <script src="./getDrive.js"></script>   <!-- Get all Drive and show it in right div -->
+    <script src="./utils.js"></script>      <!-- Extension of all file that need while sorting  -->
+    <script src="./organize.js"></script>   <!-- Organize all files in the path -->
+    <script src="./filterBtns.js"></script> <!-- Total files count and memory showed below chart -->
+    <script src="./showList.js"></script>   <!-- Show all files list -->
+    <script src="./chart.js"></script>      <!-- Form chart -->
+    <script src="./topbtns.js"></script>    <!-- refresh, Organize and change location btn -->
 </body>
 
 </html>

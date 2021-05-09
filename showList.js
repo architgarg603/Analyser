@@ -1,20 +1,20 @@
 function showFileListfn() {
     let src = pathName;
-
+    // make ul that contains all li
     let ul = document.createElement("ul");
     ul.classList.add("filesUL")
-    let li = document.createElement("li");
+    let li = document.createElement("li");      // creating first li that contain heading
     li.innerHTML = `<div class="fName">File Name</div>
                     <div class="fDate">Date</div>
                     <div class="fSize">Size</div>`
     ul.appendChild(li);
-    showFileListHelperfn(src, ul)
+    showFileListHelperfn(src, ul)       // fn that make li for each file in the folder and add in ul 
     setEvent();
 
 
 
     lowerDiv.appendChild(ul);
-
+    // creating show more and less btns
     let more = document.createElement("div");
     more.classList.add("loadMore");
     more.innerHTML = 'Show More';
@@ -23,9 +23,11 @@ function showFileListfn() {
     less.classList.add("loadLess");
     less.innerHTML = 'Show Less';
 
+
+    // adding click event on show more btn
     more.addEventListener("click", function () {
         let allLi = ul.querySelectorAll('li');
-
+        // show only 8 li that have "dikha" class
         for (let i = 8; i < allLi.length; i++) {
             if (allLi[i].classList.contains("dikha")) {
                 allLi[i].style.display = 'flex';
@@ -37,12 +39,13 @@ function showFileListfn() {
         setHeight();
     })
 
+    // adding click event on show less btn
     less.addEventListener("click", function () {
         let allLi = ul.querySelectorAll('li');
 
         let cnt = 0;
         for (let i = 1; i < allLi.length; i++) {
-
+            // show all li that have "dikha" class
             if (allLi[i].classList.contains("dikha")) {
                 cnt++;
 
@@ -66,6 +69,8 @@ function showFileListfn() {
         setHeight();
     })
     less.click();
+
+    // set file cnt and size of each type in filter btns.
     printDetails();
     lowerDiv.appendChild(more);
     lowerDiv.appendChild(less);
@@ -80,6 +85,7 @@ function showFileListHelperfn(src, ul) {
             category = "others";
         }
 
+        // check file type and add size to their respective type and increament cnt by 1
         if (category == 'documents') {
             docCnt++;
             docSize += fs.statSync(src).size;
@@ -113,6 +119,7 @@ function showFileListHelperfn(src, ul) {
     }
 }
 
+// make li of file
 function addList(category, src, ul) {
     let li = document.createElement("li");
     li.classList.add("dikha");
@@ -140,6 +147,7 @@ function addList(category, src, ul) {
 
 }
 
+// set file cnt and size of each type in filter btns.
 function printDetails() {
 
 
@@ -172,6 +180,7 @@ function printDetails() {
 
 }
 
+// function that convert byte to suitable type
 function getSizeAndUnit(size) {
     size = size / 1000;
     let sizeUnit = 'KB'

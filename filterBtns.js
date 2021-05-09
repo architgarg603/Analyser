@@ -1,18 +1,23 @@
+// =============================================  documents, imagr, audio, video, other btns in right div below chart ================================================
+
 function setEvent() {
+
+    // ==============================================================  documents Stats =============================================================================
+
     docStat.addEventListener("click", function () {
-        if (docStat.classList.contains("active")) {
+        if (docStat.classList.contains("active")) {     // checking filter is already applied or not
 
-            docStat.classList.remove("active");
+            docStat.classList.remove("active");         // if already applied remove active class
 
-            let allLi = document.querySelectorAll("li");
+            let allLi = document.querySelectorAll("li"); // bring all LI's
 
-            for (let i = 1; i < allLi.length ; i++) {
+            for (let i = 1; i < allLi.length ; i++) {   // add dikha class ( dikha class means li that is shown file list option)
 
                 allLi[i].classList.add("dikha");
 
             }
-            document.querySelector(".loadLess").click();
-            if (allLi.length < 8) {
+            document.querySelector(".loadLess").click();    // click on loadless btn so that only 8 lis show initially
+            if (allLi.length < 8) {                         //check condition if want to show "show more or less btn"
                 document.querySelector(".loadMore").style.display = "none";
                 document.querySelector(".loadLess").style.display = "none";
             } else {
@@ -20,10 +25,11 @@ function setEvent() {
             }
 
             document.querySelector(".loadLess").style.display = "none";
-            setHeight();
+            setHeight(); //set height of right div
 
 
         } else {
+            // Remove active class from all other filters and add on selected one
             imgStat.classList.remove("active");
             audioStat.classList.remove("active");
             videoStat.classList.remove("active");
@@ -31,11 +37,13 @@ function setEvent() {
             docStat.classList.add("active");
             let cnt = 0;
 
-            let allLi = document.querySelectorAll("li");
+            let allLi = document.querySelectorAll("li");    // bring all LI's
 
+
+            // add dihka class on all li of document list and remove other type of li
             for (let i = 1; i < allLi.length; i++) {
 
-                if (allLi[i].querySelector("span").classList.contains("document")) {
+                if (allLi[i].querySelector("span").classList.contains("document")) {        
                    allLi[i].classList.add("dikha");
                    cnt++;
                 } else {
@@ -43,8 +51,8 @@ function setEvent() {
                 }
 
             }
-            document.querySelector(".loadLess").click();
-            
+            document.querySelector(".loadLess").click();    // click on loadless btn so that only 8 lis show initially
+                                                            //check condition if want to show "show more or less btn"
             if (cnt < 8) {
                 document.querySelector(".loadMore").style.display = "none";
                 document.querySelector(".loadLess").style.display = "none";
@@ -58,20 +66,22 @@ function setEvent() {
         setHeight();
     })
 
+    // ==============================================================  image Stats =============================================================================
+
     imgStat.addEventListener("click", function () {
-        if (imgStat.classList.contains("active")) {
+        if (imgStat.classList.contains("active")) { // checking filter is already applied or not
+            
+            imgStat.classList.remove("active");     // if already applied remove active class
 
-            imgStat.classList.remove("active");
+            let allLi = document.querySelectorAll("li");// bring all LI's
 
-            let allLi = document.querySelectorAll("li");
-
-            for (let i = 1; i < allLi.length; i++) {
+            for (let i = 1; i < allLi.length; i++) {     // add dikha class ( dikha class means li that is shown file list option)
 
                 allLi[i].classList.add("dikha");
 
             }
-            document.querySelector(".loadLess").click();
-
+            document.querySelector(".loadLess").click();  // click on loadless btn so that only 8 lis show initially
+            //check condition if want to show "show more or less btn"
             if (allLi.length < 8) {
                 document.querySelector(".loadMore").style.display = "none";
                 document.querySelector(".loadLess").style.display = "none";
@@ -84,6 +94,7 @@ function setEvent() {
 
 
         } else {
+            // Remove active class from all other filters and add on selected one
             docStat.classList.remove("active");
             audioStat.classList.remove("active");
             videoStat.classList.remove("active");
@@ -91,8 +102,9 @@ function setEvent() {
             imgStat.classList.add("active");
             let cnt = 0;
 
-            let allLi = document.querySelectorAll("li");
-
+            let allLi = document.querySelectorAll("li");     // bring all LI's
+             
+            // add dihka class on all li of image list and remove other type of li
             for (let i = 1; i < allLi.length; i++) {
 
                 if (allLi[i].querySelector("span").classList.contains("img")) {
@@ -103,9 +115,9 @@ function setEvent() {
                  }
  
              }
-             document.querySelector(".loadLess").click();
-             
+             document.querySelector(".loadLess").click();   // click on loadless btn so that only 8 lis show initially
 
+            //check condition if want to show "show more or less btn"
             if (cnt < 8) {
                 document.querySelector(".loadMore").style.display = "none";
                 document.querySelector(".loadLess").style.display = "none";
@@ -116,24 +128,28 @@ function setEvent() {
             }
 
         }
-        setHeight();
+        setHeight();//set height of right div
     })
 
+    // ==============================================================  others Stats =============================================================================
+
     otherStat.addEventListener("click", function () {
-        if (otherStat.classList.contains("active")) {
+        if (otherStat.classList.contains("active")) {   // checking filter is already applied or not
 
-            otherStat.classList.remove("active");
+            otherStat.classList.remove("active");   // if already applied remove active class
 
-            let allLi = document.querySelectorAll("li");
+            let allLi = document.querySelectorAll("li");    // bring all LI's
 
           
-            for (let i = 1; i < allLi.length; i++) {
+            for (let i = 1; i < allLi.length; i++) {    // add dikha class ( dikha class means li that is shown file list option)
 
                 allLi[i].classList.add("dikha");
 
             }
-            document.querySelector(".loadLess").click();
-            if (allLi.length < 8) {
+            document.querySelector(".loadLess").click();    // click on loadless btn so that only 8 lis show initially
+
+            //check condition if want to show "show more or less btn"
+            if (allLi.length < 8) { 
                 document.querySelector(".loadMore").style.display = "none";
                 document.querySelector(".loadLess").style.display = "none";
             } else {
@@ -141,10 +157,11 @@ function setEvent() {
             }
 
             document.querySelector(".loadLess").style.display = "none";
-            setHeight();
+            setHeight(); //set height of right div
 
 
         } else {
+            // Remove active class from all other filters and add on selected one
             docStat.classList.remove("active");
             audioStat.classList.remove("active");
             videoStat.classList.remove("active");
@@ -152,8 +169,9 @@ function setEvent() {
             otherStat.classList.add("active");
             let cnt = 0;
 
-            let allLi = document.querySelectorAll("li");
+            let allLi = document.querySelectorAll("li");     // bring all LI's
 
+             // add dihka class on all li of other list and remove other type of li
             for (let i = 1; i < allLi.length; i++) {
 
                 if (allLi[i].querySelector("span").classList.contains("other")) {
@@ -164,9 +182,9 @@ function setEvent() {
                 }
 
             }
-            document.querySelector(".loadLess").click();
+            document.querySelector(".loadLess").click();    // click on loadless btn so that only 8 lis show initially
             
-
+            //check condition if want to show "show more or less btn"
             if (cnt < 8) {
                 document.querySelector(".loadMore").style.display = "none";
                 document.querySelector(".loadLess").style.display = "none";
@@ -177,22 +195,26 @@ function setEvent() {
             }
 
         }
-        setHeight();
+        setHeight(); //set height of right div
     })
 
+    // ==============================================================  Audio Stats =============================================================================
+
     audioStat.addEventListener("click", function () {
-        if (audioStat.classList.contains("active")) {
+        if (audioStat.classList.contains("active")) {   // checking filter is already applied or not
 
-            audioStat.classList.remove("active");
+            audioStat.classList.remove("active");   // if already applied remove active class
 
-            let allLi = document.querySelectorAll("li");
+            let allLi = document.querySelectorAll("li");    // bring all LI's
 
-            for (let i = 1; i < allLi.length; i++) {
+            for (let i = 1; i < allLi.length; i++) {    // add dikha class ( dikha class means li that is shown file list option)
 
                 allLi[i].classList.add("dikha");
 
             }
-            document.querySelector(".loadLess").click();
+            document.querySelector(".loadLess").click();    // click on loadless btn so that only 8 lis show initially
+            
+            //check condition if want to show "show more or less btn"
             if (allLi.length < 8) {
                 document.querySelector(".loadMore").style.display = "none";
                 document.querySelector(".loadLess").style.display = "none";
@@ -205,6 +227,7 @@ function setEvent() {
 
 
         } else {
+            // Remove active class from all other filters and add on selected one
             docStat.classList.remove("active");
             otherStat.classList.remove("active");
             videoStat.classList.remove("active");
@@ -212,8 +235,9 @@ function setEvent() {
             audioStat.classList.add("active");
             let cnt = 0;
 
-            let allLi = document.querySelectorAll("li");
-
+            let allLi = document.querySelectorAll("li");     // bring all LI's
+            
+            // add dihka class on all li of document list and remove other type of li
             for (let i = 1; i < allLi.length; i++) {
 
                 if (allLi[i].querySelector("span").classList.contains("audio")) {
@@ -224,9 +248,9 @@ function setEvent() {
                 }
 
             }
-            document.querySelector(".loadLess").click();
+            document.querySelector(".loadLess").click();    // click on loadless btn so that only 8 lis show initially
             
-
+            //check condition if want to show "show more or less btn"
             if (cnt < 8) {
                 document.querySelector(".loadMore").style.display = "none";
                 document.querySelector(".loadLess").style.display = "none";
@@ -237,23 +261,28 @@ function setEvent() {
             }
 
         }
-        setHeight();
+        setHeight();    //set height of right div
     })
+
+    // ==============================================================  Video Stats =============================================================================
+
     videoStat.addEventListener("click", function () {
-        if (videoStat.classList.contains("active")) {
+        if (videoStat.classList.contains("active")) {   // checking filter is already applied or not
 
-            videoStat.classList.remove("active");
+            videoStat.classList.remove("active");   // if already applied remove active class
 
-            let allLi = document.querySelectorAll("li");
+            let allLi = document.querySelectorAll("li");    // bring all LI's
 
            
-            for (let i = 1; i < allLi.length; i++) {
+            for (let i = 1; i < allLi.length; i++) {    // add dikha class ( dikha class means li that is shown file list option)
 
                 allLi[i].classList.add("dikha");
 
             }
-            document.querySelector(".loadLess").click();
-            if (allLi.length < 8) {
+            document.querySelector(".loadLess").click();    // click on loadless btn so that only 8 lis show initially
+
+            //check condition if want to show "show more or less btn"
+            if (allLi.length < 8) { 
                 document.querySelector(".loadMore").style.display = "none";
                 document.querySelector(".loadLess").style.display = "none";
             } else {
@@ -266,6 +295,7 @@ function setEvent() {
 
 
         } else {
+            // Remove active class from all other filters and add on selected one
             docStat.classList.remove("active");
             otherStat.classList.remove("active");
             audioStat.classList.remove("active");
@@ -273,8 +303,8 @@ function setEvent() {
             videoStat.classList.add("active");
             let cnt = 0;
 
-            let allLi = document.querySelectorAll("li");
-
+            let allLi = document.querySelectorAll("li");     // bring all LI's
+             // add dihka class on all li of document list and remove other type of li
             for (let i = 1; i < allLi.length; i++) {
 
                 if (allLi[i].querySelector("span").classList.contains("video")) {
@@ -285,9 +315,9 @@ function setEvent() {
                 }
 
             }
-            document.querySelector(".loadLess").click();
-            
+            document.querySelector(".loadLess").click();    // click on loadless btn so that only 8 lis show initially
 
+            //check condition if want to show "show more or less btn"
             if (cnt < 8) {
                 document.querySelector(".loadMore").style.display = "none";
                 document.querySelector(".loadLess").style.display = "none";
@@ -297,6 +327,6 @@ function setEvent() {
             }
 
         }
-        setHeight();
+        setHeight(); //set height of right div
     })
 }
