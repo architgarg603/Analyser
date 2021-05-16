@@ -27,6 +27,7 @@ refresh.addEventListener("click", function () {
     })
     // re-evaluate data and show on UI 
     showFileListfn();
+    setEvent();
     getDrive();
     setChart();
 })
